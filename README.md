@@ -50,6 +50,8 @@
 
 [Echarts数据可视化开发中的一些技巧和常见问题汇总](echarts)
 
+[获取当前所处城市及当地天气](cityWeather)
+
 ## 常用功能代码块(functionModel)
 
 [放大镜功能](magnifyingGlass)
@@ -79,3 +81,7 @@
 [防抖和节流](shakeThrottle)
 
 [JS循环遍历](cycle)
+
+## vue-directives
+
+基于 vue 的自定义指令集合
