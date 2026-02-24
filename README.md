@@ -52,6 +52,9 @@
 
 [获取当前所处城市及当地天气](cityWeather)
 
+[将网页或部分网页生成为可编辑、非图片式、可打印的矢量 pdf](dompdf)[https://dompdfjs.lisky.com.cn/]
+
+
 ## 常用功能代码块(functionModel)
 
 [放大镜功能](magnifyingGlass)
