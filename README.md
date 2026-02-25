@@ -3,7 +3,7 @@
  * @Date: 2026-01-29 21:44:48
  * @email: lzl102872@163.com
  * @LastEditors: lizhiliang
- * @LastEditTime: 2026-02-24 17:10:13
+ * @LastEditTime: 2026-02-25 16:21:54
  * @motto: Still water run deep
  * @Description: Modify here please
  * @FilePath: /project-functionModel/README.md
@@ -53,6 +53,8 @@
 [获取当前所处城市及当地天气](cityWeather)
 
 [将网页或部分网页生成为可编辑、非图片式、可打印的矢量 pdf](dompdf)[https://dompdfjs.lisky.com.cn/]
+
+[新一代声明式信息图可视化引擎](infographic)[https://infographic.antv.vision/learn]
 
 
 ## 常用功能代码块(functionModel)
