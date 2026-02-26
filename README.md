@@ -3,7 +3,7 @@
  * @Date: 2026-01-29 21:44:48
  * @email: lzl102872@163.com
  * @LastEditors: lizhiliang
- * @LastEditTime: 2026-02-25 16:21:54
+ * @LastEditTime: 2026-02-26 16:46:47
  * @motto: Still water run deep
  * @Description: Modify here please
  * @FilePath: /project-functionModel/README.md
@@ -86,6 +86,8 @@
 [防抖和节流](shakeThrottle)
 
 [JS循环遍历](cycle)
+
+[中文亲戚关系计算器](relationship)[https://github.com/ExploringTheCodeWorld/relationship-ts][https://docs.qinyimo.cn/]
 
 ## vue-directives
 
