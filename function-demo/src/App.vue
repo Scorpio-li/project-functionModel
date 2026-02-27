@@ -14,6 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/infographic">Infographic(声明式信息图)</RouterLink>
+        <RouterLink to="/pdf">PDF(网页生成pdf)</RouterLink>
       </nav>
     </div>
   </header>
