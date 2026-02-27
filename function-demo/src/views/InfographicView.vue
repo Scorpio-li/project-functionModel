@@ -1,21 +1,21 @@
 <template>
     <div ref="containerRef"></div>
   </template>
-  
+
   <script setup>
   import {ref, onMounted, onBeforeUnmount} from 'vue';
   import {Infographic} from '@antv/infographic';
-  
+
   const containerRef = ref(null);
   let infographic = null;
-  
+
   onMounted(() => {
     infographic = new Infographic({
       container: containerRef.value,
       width: '100%',
       height: '100%',
     });
-  
+
     infographic.render(`
       infographic list-row-simple-horizontal-arrow
       data
@@ -28,7 +28,7 @@
             desc 完成
     `);
   });
-  
+
   onBeforeUnmount(() => {
     if (infographic) {
       infographic.destroy();
