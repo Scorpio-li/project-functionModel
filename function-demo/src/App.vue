@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Author: Lizhiliang
+ * @Date: 2026-02-26 16:52:47
+ * @LastEditTime: 2026-02-28 18:14:38
+ * @LastEditors: lizhiliang
+ * @Usage: 
+-->
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
@@ -15,6 +23,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/infographic">Infographic(声明式信息图)</RouterLink>
         <RouterLink to="/pdf">PDF(网页生成pdf)</RouterLink>
+        <RouterLink to="/relation">中文亲戚关系计算器</RouterLink>
       </nav>
     </div>
   </header>
