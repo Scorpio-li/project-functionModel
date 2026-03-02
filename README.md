@@ -2,8 +2,8 @@
  * @Author: Derick.lizhiliang
  * @Date: 2026-01-29 21:44:48
  * @email: lzl102872@163.com
- * @LastEditors: lizhiliang
- * @LastEditTime: 2026-02-26 16:46:47
+ * @LastEditors: Derick.lizhiliang
+ * @LastEditTime: 2026-03-02 22:29:32
  * @motto: Still water run deep
  * @Description: Modify here please
  * @FilePath: /project-functionModel/README.md
@@ -56,6 +56,7 @@
 
 [新一代声明式信息图可视化引擎](infographic)[https://infographic.antv.vision/learn]
 
+[后台管理系统的新手引导](intro)[https://github.com/usablica/intro.js]
 
 ## 常用功能代码块(functionModel)
 

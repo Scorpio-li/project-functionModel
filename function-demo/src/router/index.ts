@@ -33,6 +33,11 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/PdfView.vue'),
     },
+    {
+      path: '/intro',
+      name: 'intro',
+      component: () => import('../views/IntroView.vue'),
+    }
   ],
 })
 
