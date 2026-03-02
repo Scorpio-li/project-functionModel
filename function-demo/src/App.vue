@@ -1,13 +1,4 @@
-<!--
- * @Author: Derick.lizhiliang
- * @Date: 2026-02-27 21:29:21
- * @email: lzl102872@163.com
- * @LastEditors: Derick.lizhiliang
- * @LastEditTime: 2026-03-02 22:27:02
- * @motto: Still water run deep
- * @Description: Modify here please
- * @FilePath: /project-functionModel/function-demo/src/App.vue
--->
+
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
@@ -26,6 +17,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/infographic">Infographic(声明式信息图)</RouterLink>
         <RouterLink to="/pdf">PDF(网页生成pdf)</RouterLink>
         <RouterLink to="/intro">后台管理系统的新手引导(intro)</RouterLink>
+        <RouterLink to="/relation">中文亲戚关系计算器</RouterLink>
       </nav>
     </div>
   </header>
@@ -38,7 +30,6 @@ header {
   line-height: 1.5;
   max-height: 100vh;
 }
-
 .logo {
   display: block;
   margin: 0 auto 2rem;
