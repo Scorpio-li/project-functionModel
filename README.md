@@ -52,11 +52,11 @@
 
 [获取当前所处城市及当地天气](cityWeather)
 
-[将网页或部分网页生成为可编辑、非图片式、可打印的矢量 pdf](dompdf)[https://dompdfjs.lisky.com.cn/]
+- [将网页或部分网页生成为可编辑、非图片式、可打印的矢量 pdf](dompdf)[https://dompdfjs.lisky.com.cn/]
 
-[新一代声明式信息图可视化引擎](infographic)[https://infographic.antv.vision/learn]
+- [新一代声明式信息图可视化引擎](infographic)[https://infographic.antv.vision/learn]
 
-[后台管理系统的新手引导](intro)[https://github.com/usablica/intro.js]
+- [后台管理系统的新手引导](intro)[https://github.com/usablica/intro.js]
 
 ## 常用功能代码块(functionModel)
 
@@ -88,7 +88,7 @@
 
 [JS循环遍历](cycle)
 
-[中文亲戚关系计算器](relationship)[https://github.com/ExploringTheCodeWorld/relationship-ts][https://docs.qinyimo.cn/]
+- [中文亲戚关系计算器](relationship)[https://github.com/ExploringTheCodeWorld/relationship-ts][https://docs.qinyimo.cn/]
 
 ## vue-directives
 
