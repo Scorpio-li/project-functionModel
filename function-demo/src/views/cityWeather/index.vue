@@ -11,16 +11,17 @@ import { ref, onMounted } from 'vue';
 const address = ref('');
 const weather = ref('');
 onMounted(() => {
-    getLocation().then(({lat, lon}) => {
+    getLocation().then(({lat, lon}: any) => {
         getCityName(lat, lon).then((city) => {
             address.value = city;
         });
+        getWeather(lat, lon)
+            .then((weather) => {
+                console.log('天气:', weather);
+                weather.value = weather.zh;
+            });
     });
-    getWeather()
-    .then((weather) => {
-        console.log('天气:', weather);
-        weather.value = weather.zh;
-    });
+    
 });
 
 // 获取当前位置
@@ -75,7 +76,7 @@ const WEATHER_CODE_MAP: any = {
 	99: { en: 'Thunderstorm with heavy hail', zh: '雷阵雨伴大冰雹' }
 };
 
-const getWeather = async (lat, lon) => {
+const getWeather = async (lat: any, lon: any) => {
     const result = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
 	const data = await result.json();
     const code = data.current_weather.weathercode;

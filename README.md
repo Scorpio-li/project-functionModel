@@ -2,8 +2,8 @@
  * @Author: Derick.lizhiliang
  * @Date: 2026-01-29 21:44:48
  * @email: lzl102872@163.com
- * @LastEditors: Derick.lizhiliang
- * @LastEditTime: 2026-03-02 22:29:32
+ * @LastEditors: lizhiliang
+ * @LastEditTime: 2026-03-03 17:41:38
  * @motto: Still water run deep
  * @Description: Modify here please
  * @FilePath: /project-functionModel/README.md
@@ -50,7 +50,7 @@
 
 [Echarts数据可视化开发中的一些技巧和常见问题汇总](echarts)
 
-[获取当前所处城市及当地天气](cityWeather)
+- [获取当前所处城市及当地天气](cityWeather)
 
 - [将网页或部分网页生成为可编辑、非图片式、可打印的矢量 pdf](dompdf)[https://dompdfjs.lisky.com.cn/]
 
