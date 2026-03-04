@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@antv/infographic": "^0.2.15",
+    "axios": "^1.13.6",
     "dompdf.js": "^1.1.1",
     "fabric": "^7.2.0",
     "intro.js": "^8.3.2",

@@ -29,6 +29,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/cityWeather">获取当前位置和天气</RouterLink>
         <RouterLink to="/heat">将数据转换为流畅、直观的热力图层(heat)</RouterLink>
         <RouterLink to="/fabric">图片选区标注(fabric)</RouterLink>
+        <RouterLink to="/axios">请求合并(axios)</RouterLink>
       </nav>
     </div>
   </header>

@@ -58,6 +58,8 @@
 
 - [后台管理系统的新手引导](intro.js)[https://github.com/usablica/intro.js]
 
+- [请求合并](axios)
+
 ## 常用功能代码块(functionModel)
 
 [放大镜功能](magnifyingGlass)

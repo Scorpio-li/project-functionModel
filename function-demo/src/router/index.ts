@@ -58,6 +58,11 @@ const router = createRouter({
       path: '/fabric',
       name: 'fabric',
       component: () => import('../views/Fabric/index.vue'),
+    },
+    {
+      path: '/axios',
+      name: 'axios',
+      component: () => import('../views/axios/index.vue'),
     }
   ],
 })
