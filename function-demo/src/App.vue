@@ -18,7 +18,8 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/pdf">PDF(网页生成pdf)</RouterLink>
         <RouterLink to="/intro">后台管理系统的新手引导(intro)</RouterLink>
         <RouterLink to="/relation">中文亲戚关系计算器</RouterLink>
-        <RouterLink to="/cityWeather">获取当前位置和天气</RouterLink>
+        <RouterLink to="/">获取当前位置和天气</RouterLink>
+        <RouterLink to="/heat">将数据转换为流畅、直观的热力图层</RouterLink>
       </nav>
     </div>
   </header>

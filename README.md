@@ -3,7 +3,7 @@
  * @Date: 2026-01-29 21:44:48
  * @email: lzl102872@163.com
  * @LastEditors: lizhiliang
- * @LastEditTime: 2026-03-03 17:41:38
+ * @LastEditTime: 2026-03-04 10:00:19
  * @motto: Still water run deep
  * @Description: Modify here please
  * @FilePath: /project-functionModel/README.md
@@ -52,11 +52,11 @@
 
 - [获取当前所处城市及当地天气](cityWeather)
 
-- [将网页或部分网页生成为可编辑、非图片式、可打印的矢量 pdf](dompdf)[https://dompdfjs.lisky.com.cn/]
+- [将网页或部分网页生成为可编辑、非图片式、可打印的矢量 pdf](dompdf.js)[https://dompdfjs.lisky.com.cn/]
 
-- [新一代声明式信息图可视化引擎](infographic)[https://infographic.antv.vision/learn]
+- [新一代声明式信息图可视化引擎](@antv/infographic)[https://infographic.antv.vision/learn]
 
-- [后台管理系统的新手引导](intro)[https://github.com/usablica/intro.js]
+- [后台管理系统的新手引导](intro.js)[https://github.com/usablica/intro.js]
 
 ## 常用功能代码块(functionModel)
 
@@ -88,7 +88,9 @@
 
 [JS循环遍历](cycle)
 
-- [中文亲戚关系计算器](relationship)[https://github.com/ExploringTheCodeWorld/relationship-ts][https://docs.qinyimo.cn/]
+- [中文亲戚关系计算器](relationship-ts)[https://github.com/ExploringTheCodeWorld/relationship-ts][https://docs.qinyimo.cn/]
+
+- [将数据转换为流畅、直观的热力图层](jheat.js)[https://github.com/williamtroup/Heat.js]
 
 ## vue-directives
 

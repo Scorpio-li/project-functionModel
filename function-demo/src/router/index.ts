@@ -43,6 +43,16 @@ const router = createRouter({
       path: '/relation',
       name: 'relation',
       component: () => import('../views/RelationView.vue'),
+    }, 
+    {
+      path: '/cityWeather',
+      name: 'cityWeather',
+      component: () => import('../views/cityWeather/index.vue'),
+    },
+    {
+      path: '/heat',
+      name: 'heat',
+      component: () => import('../views/Heat/index.vue'),
     }
   ],
 })
