@@ -3,7 +3,7 @@
  * @Date: 2026-01-29 21:44:48
  * @email: lzl102872@163.com
  * @LastEditors: lizhiliang
- * @LastEditTime: 2026-03-04 10:00:19
+ * @LastEditTime: 2026-03-04 11:05:06
  * @motto: Still water run deep
  * @Description: Modify here please
  * @FilePath: /project-functionModel/README.md
@@ -91,6 +91,8 @@
 - [中文亲戚关系计算器](relationship-ts)[https://github.com/ExploringTheCodeWorld/relationship-ts][https://docs.qinyimo.cn/]
 
 - [将数据转换为流畅、直观的热力图层](jheat.js)[https://github.com/williamtroup/Heat.js]
+
+- [图片选区标注](Fabric.js)[https://github.com/fabricjs/fabric.js]
 
 ## vue-directives
 

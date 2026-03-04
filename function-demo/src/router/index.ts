@@ -53,6 +53,11 @@ const router = createRouter({
       path: '/heat',
       name: 'heat',
       component: () => import('../views/Heat/index.vue'),
+    },
+    {
+      path: '/fabric',
+      name: 'fabric',
+      component: () => import('../views/Fabric/index.vue'),
     }
   ],
 })
