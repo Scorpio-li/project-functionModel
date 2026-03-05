@@ -3,7 +3,7 @@
  * @Date: 2026-01-29 21:44:48
  * @email: lzl102872@163.com
  * @LastEditors: lizhiliang
- * @LastEditTime: 2026-03-04 11:05:06
+ * @LastEditTime: 2026-03-05 15:24:57
  * @motto: Still water run deep
  * @Description: Modify here please
  * @FilePath: /project-functionModel/README.md
@@ -14,19 +14,13 @@
 
 ## 常用业务处理(Project)
 
-[前端如何处理大量数据](dataProcessing)
-
 [content-visibility让长列表网页的渲染性能提升](content-visibility)
 
 [文件上传预览及使用七牛云上传](uploadFile)
 
 [防止多次重复请求数据覆盖问题](repeatedRequests)
 
-[H5移动端页面禁止长按保存图片](forbiddenLongClick)
-
 [序列图片视频化技术高性能实现方法](imageVideo)
-
-[解决移动端弹窗滚动穿透问题](scrollThrough)
 
 [邮件发送](mailBot)
 
@@ -36,13 +30,9 @@
 
 [移动端页面适配 & loading加载效果](px2rem)
 
-[正则表达式](regexRule)
-
 [Worker实践](worker)
 
 [前端工程化-自动生成页面](autoBuild)
-
-[CSS常用修改](cssEdit)
 
 - [Web即时通讯](instantMessaging)
 
