@@ -1,10 +1,4 @@
-<!--
- * @Author: Li Zhiliang
- * @Date: 2021-03-03 10:42:38
- * @LastEditors: Li Zhiliang
- * @LastEditTime: 2021-03-03 11:00:54
- * @FilePath: /feature-plugin/project/instantMessaging.md
--->
+
 # Web 端即时通讯
 
 Web 端即时通讯方案大致有 4 种：传统 Ajax 短轮询、Comet 技术、WebSocket 技术、SSE（Server-sent Events）。

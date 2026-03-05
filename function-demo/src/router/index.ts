@@ -63,6 +63,11 @@ const router = createRouter({
       path: '/axios',
       name: 'axios',
       component: () => import('../views/axios/index.vue'),
+    },
+    {
+      path: '/instantMessage',
+      name: 'instantMessage',
+      component: () => import('../views/instantMessaging/index.vue'),
     }
   ],
 })

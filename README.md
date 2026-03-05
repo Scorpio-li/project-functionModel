@@ -48,7 +48,7 @@
 
 [Web即时通讯](instantMessaging)
 
-[Echarts数据可视化开发中的一些技巧和常见问题汇总](echarts)
+- [Echarts数据可视化开发中的一些技巧和常见问题汇总](echarts)
 
 - [获取当前所处城市及当地天气](cityWeather)
 

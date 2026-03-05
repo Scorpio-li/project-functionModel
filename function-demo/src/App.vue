@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: Lizhiliang
  * @Date: 2026-02-26 16:52:47
- * @LastEditTime: 2026-03-04 11:19:28
+ * @LastEditTime: 2026-03-05 15:01:54
  * @LastEditors: lizhiliang
  * @Usage: 
 -->
@@ -30,6 +30,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/heat">将数据转换为流畅、直观的热力图层(heat)</RouterLink>
         <RouterLink to="/fabric">图片选区标注(fabric)</RouterLink>
         <RouterLink to="/axios">请求合并(axios)</RouterLink>
+        <RouterLink to="/instantMessage">Web端即时通讯(instantMessage)</RouterLink>
       </nav>
     </div>
   </header>
