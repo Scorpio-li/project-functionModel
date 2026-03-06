@@ -3,7 +3,7 @@
  * @Date: 2026-01-29 21:44:48
  * @email: lzl102872@163.com
  * @LastEditors: lizhiliang
- * @LastEditTime: 2026-03-05 15:24:57
+ * @LastEditTime: 2026-03-05 15:35:57
  * @motto: Still water run deep
  * @Description: Modify here please
  * @FilePath: /project-functionModel/README.md
@@ -23,8 +23,6 @@
 [序列图片视频化技术高性能实现方法](imageVideo)
 
 [邮件发送](mailBot)
-
-[字符串常用技巧](string)
 
 [骨架屏 Skeleton 效果](skeleton)
 
@@ -83,6 +81,8 @@
 - [将数据转换为流畅、直观的热力图层](jheat.js)[https://github.com/williamtroup/Heat.js]
 
 - [图片选区标注](Fabric.js)[https://github.com/fabricjs/fabric.js]
+
+- [本地mso-map的npm包示例](mso-map)
 
 ## vue-directives
 

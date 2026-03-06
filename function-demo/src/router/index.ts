@@ -68,6 +68,11 @@ const router = createRouter({
       path: '/instantMessage',
       name: 'instantMessage',
       component: () => import('../views/instantMessaging/index.vue'),
+    },
+    {
+      path: '/msoMap',
+      name: 'msoMap',
+      component: () => import('../views/msoMap/index.vue'),
     }
   ],
 })

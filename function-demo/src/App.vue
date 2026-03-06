@@ -31,6 +31,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/fabric">图片选区标注(fabric)</RouterLink>
         <RouterLink to="/axios">请求合并(axios)</RouterLink>
         <RouterLink to="/instantMessage">Web端即时通讯(instantMessage)</RouterLink>
+        <RouterLink to="/msoMap">Map组件</RouterLink>
       </nav>
     </div>
   </header>

@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  mso-map: link:../../../git-new/mso-map
+
 importers:
 
   .:
@@ -26,6 +29,9 @@ importers:
       jheat.js:
         specifier: ^5.0.1
         version: 5.0.1
+      mso-map:
+        specifier: link:../../../git-new/mso-map
+        version: link:../../../git-new/mso-map
       pinia:
         specifier: ^3.0.4
         version: 3.0.4(typescript@5.9.3)(vue@3.5.29(typescript@5.9.3))
