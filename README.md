@@ -1,9 +1,9 @@
 <!--
  * @Author: Derick.lizhiliang
- * @Date: 2026-01-29 21:44:48
+ * @Date: 2026-03-06 23:05:02
  * @email: lzl102872@163.com
- * @LastEditors: lizhiliang
- * @LastEditTime: 2026-03-06 16:07:51
+ * @LastEditors: Derick.lizhiliang
+ * @LastEditTime: 2026-03-06 23:06:26
  * @motto: Still water run deep
  * @Description: Modify here please
  * @FilePath: /project-functionModel/README.md
@@ -47,8 +47,6 @@
 - [请求合并](axios)
 
 ## 常用功能代码块(functionModel)
-
-[时间处理](time)
 
 [App Store 卡片展开效果](cardShow)
 
