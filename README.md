@@ -3,7 +3,7 @@
  * @Date: 2026-01-29 21:44:48
  * @email: lzl102872@163.com
  * @LastEditors: lizhiliang
- * @LastEditTime: 2026-03-05 15:35:57
+ * @LastEditTime: 2026-03-06 16:07:51
  * @motto: Still water run deep
  * @Description: Modify here please
  * @FilePath: /project-functionModel/README.md
@@ -47,22 +47,6 @@
 - [请求合并](axios)
 
 ## 常用功能代码块(functionModel)
-
-[放大镜功能](magnifyingGlass)
-
-[瀑布流](waterfallFlow)
-
-[水印](watermark)
-
-[页面布局](pageLayout)
-
-[签名功能](signature)
-
-[用户体验 | 页面阅读进度提示](readSchedule)
-
-[字体样式](stringStyle)
-
-[JS判断点击区域](clickContent)
 
 [时间处理](time)
 
