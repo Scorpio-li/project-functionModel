@@ -33,7 +33,6 @@
   <script setup lang="ts">
   import { ref, watch } from 'vue'
   import { LeafletMap } from 'mso-map'
-  // import LeafletMap from '@/components/Map/LeafletMap.vue'
   import 'mso-map/style.css'
   import defaultAvatar from '@/assets/images/icon_navigation.svg'
   

@@ -10,3 +10,4 @@
  */
 /// <reference types="vite/client" />
 declare module 'dompdf.js';
+declare module 'mso-map';
