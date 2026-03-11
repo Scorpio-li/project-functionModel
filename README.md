@@ -3,7 +3,7 @@
  * @Date: 2026-03-06 23:05:02
  * @email: lzl102872@163.com
  * @LastEditors: lizhiliang
- * @LastEditTime: 2026-03-11 16:33:26
+ * @LastEditTime: 2026-03-11 16:50:42
  * @motto: Still water run deep
  * @Description: Modify here please
  * @FilePath: /project-functionModel/README.md
@@ -54,7 +54,3 @@
 [Worker实践](worker)
 
 [前端工程化-自动生成页面](autoBuild)
-
-## vue-directives
-
-基于 vue 的自定义指令集合
