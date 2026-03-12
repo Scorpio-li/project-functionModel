@@ -1,11 +1,4 @@
-/*
- * @Description: 
- * @Author: Lizhiliang
- * @Date: 2026-03-04 16:31:02
- * @LastEditTime: 2026-03-04 16:31:29
- * @LastEditors: lizhiliang
- * @Usage: 
- */
+
 // src/api/axios.js
 import axios from 'axios';
 
@@ -22,7 +15,7 @@ const instance = axios.create({
 const pendingRequests = new Map();
 
 // 生成请求唯一标识
-function generateRequestKey(config) {
+function generateRequestKey(config: any) {
    //感谢“我是一只JU”提供的改善建议
    //将JSON.stringify换成qs.stringify
    //好处：支持多层嵌套，支持数组处理，顺序不会影响结果

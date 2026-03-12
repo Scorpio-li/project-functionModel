@@ -37,12 +37,6 @@
 
 ## 常用业务处理(Project)
 
-[content-visibility让长列表网页的渲染性能提升](content-visibility)
-
-[文件上传预览及使用七牛云上传](uploadFile)
-
-[防止多次重复请求数据覆盖问题](repeatedRequests)
-
 [序列图片视频化技术高性能实现方法](imageVideo)
 
 [邮件发送](mailBot)
