@@ -41,8 +41,6 @@
 
 [邮件发送](mailBot)
 
-[骨架屏 Skeleton 效果](skeleton)
-
 [移动端页面适配 & loading加载效果](px2rem)
 
 [Worker实践](worker)
