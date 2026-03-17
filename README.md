@@ -34,12 +34,11 @@
 
 - [请求合并](axios)
 
+- [邮件发送](mailBot)(https://nodemailer.com/)
 
 ## 常用业务处理(Project)
 
-[序列图片视频化技术高性能实现方法](imageVideo)
 
-[邮件发送](mailBot)
 
 [移动端页面适配 & loading加载效果](px2rem)
 

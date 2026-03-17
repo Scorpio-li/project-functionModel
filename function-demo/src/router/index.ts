@@ -73,6 +73,11 @@ const router = createRouter({
       path: '/msoMap',
       name: 'msoMap',
       component: () => import('../views/msoMap/index.vue'),
+    },
+    {
+      path: '/mailBot',
+      name: 'mailBot',
+      component: () => import('../views/mailBot/index.vue'),
     }
   ],
 })
