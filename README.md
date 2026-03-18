@@ -3,7 +3,7 @@
  * @Date: 2026-03-06 23:05:02
  * @email: lzl102872@163.com
  * @LastEditors: lizhiliang
- * @LastEditTime: 2026-03-11 16:50:42
+ * @LastEditTime: 2026-03-18 19:25:18
  * @motto: Still water run deep
  * @Description: Modify here please
  * @FilePath: /project-functionModel/README.md
@@ -36,8 +36,8 @@
 
 - [邮件发送](mailBot)(https://nodemailer.com/)
 
-## 常用业务处理(Project)
+- [Worker实践](utils/worker)
 
-[Worker实践](worker)
+## 常用业务处理(Project)
 
 [前端工程化-自动生成页面](autoBuild)

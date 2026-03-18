@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @Author: Lizhiliang
+ * @Date: 2026-02-11 14:26:20
+ * @LastEditTime: 2026-03-18 19:23:22
+ * @LastEditors: lizhiliang
+ * @Usage: 
+ */
 // 引入worker脚本
 
 import workerScript from './worker.js'
