@@ -38,10 +38,6 @@
 
 ## 常用业务处理(Project)
 
-
-
-[移动端页面适配 & loading加载效果](px2rem)
-
 [Worker实践](worker)
 
 [前端工程化-自动生成页面](autoBuild)
