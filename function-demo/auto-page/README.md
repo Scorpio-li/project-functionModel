@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Author: Lizhiliang
+ * @Date: 2026-03-19 16:14:27
+ * @LastEditTime: 2026-03-19 16:15:12
+ * @LastEditors: lizhiliang
+ * @Usage: 
+-->
 # 前端工程化-自动生成页面
 
 ## 编辑配置文件
