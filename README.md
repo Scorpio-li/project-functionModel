@@ -38,6 +38,4 @@
 
 - [Worker实践](utils/worker)
 
-## 常用业务处理(Project)
-
-[前端工程化-自动生成页面](autoBuild)
+- [前端工程化-自动生成页面](autoBuild)
