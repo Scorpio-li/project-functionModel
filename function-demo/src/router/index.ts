@@ -1,85 +1,94 @@
+/*
+ * @Description: 
+ * @Author: Lizhiliang
+ * @Date: 2026-02-26 16:52:47
+ * @LastEditTime: 2026-03-19 16:41:39
+ * @LastEditors: lizhiliang
+ * @Usage: 
+ */
 
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 // 自动生成页面--自动添加路由
 import addRoute from './addRoute.js'
+import routes from './routes'
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView,
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/AboutView.vue'),
-  },
-      {
-    path: '/infographic',
-    name: 'infographic',
-    // route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/InfographicView.vue'),
-  },
-  {
-    path: '/pdf',
-    name: 'pdf',
-    // route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/PdfView.vue'),
-  },
-  {
-    path: '/intro',
-    name: 'intro',
-    component: () => import('../views/IntroView.vue'),
-  },
-  {
-    path: '/relation',
-    name: 'relation',
-    component: () => import('../views/RelationView.vue'),
-  }, 
-  {
-    path: '/cityWeather',
-    name: 'cityWeather',
-    component: () => import('../views/cityWeather/index.vue'),
-  },
-  {
-    path: '/heat',
-    name: 'heat',
-    component: () => import('../views/Heat/index.vue'),
-  },
-  {
-    path: '/fabric',
-    name: 'fabric',
-    component: () => import('../views/Fabric/index.vue'),
-  },
-  {
-    path: '/axios',
-    name: 'axios',
-    component: () => import('../views/axios/index.vue'),
-  },
-  {
-    path: '/instantMessage',
-    name: 'instantMessage',
-    component: () => import('../views/instantMessaging/index.vue'),
-  },
-  {
-    path: '/msoMap',
-    name: 'msoMap',
-    component: () => import('../views/msoMap/index.vue'),
-  },
-  {
-    path: '/mailBot',
-    name: 'mailBot',
-    component: () => import('../views/mailBot/index.vue'),
-  }
-]
+// const routes = [
+//   {
+//     path: '/',
+//     name: 'home',
+//     component: HomeView,
+//   },
+//   {
+//     path: '/about',
+//     name: 'about',
+//     // route level code-splitting
+//     // this generates a separate chunk (About.[hash].js) for this route
+//     // which is lazy-loaded when the route is visited.
+//     component: () => import('../views/AboutView.vue'),
+//   },
+//       {
+//     path: '/infographic',
+//     name: 'infographic',
+//     // route level code-splitting
+//     // this generates a separate chunk (About.[hash].js) for this route
+//     // which is lazy-loaded when the route is visited.
+//     component: () => import('../views/InfographicView.vue'),
+//   },
+//   {
+//     path: '/pdf',
+//     name: 'pdf',
+//     // route level code-splitting
+//     // this generates a separate chunk (About.[hash].js) for this route
+//     // which is lazy-loaded when the route is visited.
+//     component: () => import('../views/PdfView.vue'),
+//   },
+//   {
+//     path: '/intro',
+//     name: 'intro',
+//     component: () => import('../views/IntroView.vue'),
+//   },
+//   {
+//     path: '/relation',
+//     name: 'relation',
+//     component: () => import('../views/RelationView.vue'),
+//   }, 
+//   {
+//     path: '/cityWeather',
+//     name: 'cityWeather',
+//     component: () => import('../views/cityWeather/index.vue'),
+//   },
+//   {
+//     path: '/heat',
+//     name: 'heat',
+//     component: () => import('../views/Heat/index.vue'),
+//   },
+//   {
+//     path: '/fabric',
+//     name: 'fabric',
+//     component: () => import('../views/Fabric/index.vue'),
+//   },
+//   {
+//     path: '/axios',
+//     name: 'axios',
+//     component: () => import('../views/axios/index.vue'),
+//   },
+//   {
+//     path: '/instantMessage',
+//     name: 'instantMessage',
+//     component: () => import('../views/instantMessaging/index.vue'),
+//   },
+//   {
+//     path: '/msoMap',
+//     name: 'msoMap',
+//     component: () => import('../views/msoMap/index.vue'),
+//   },
+//   {
+//     path: '/mailBot',
+//     name: 'mailBot',
+//     component: () => import('../views/mailBot/index.vue'),
+//   }
+// ]
 
 const lastRoute = routes.concat(addRoute)
 const router = createRouter({

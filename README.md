@@ -38,4 +38,4 @@
 
 - [Worker实践](utils/worker)
 
-- [前端工程化-自动生成页面](autoBuild)
+- [前端工程化-自动生成页面](autoBuild)(generate-page)
