@@ -2,16 +2,16 @@
  * @Description: 
  * @Author: Lizhiliang
  * @Date: 2026-02-26 16:52:47
- * @LastEditTime: 2026-03-19 16:41:39
+ * @LastEditTime: 2026-03-20 10:55:44
  * @LastEditors: lizhiliang
  * @Usage: 
  */
 
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+// import HomeView from '../views/HomeView.vue'
 // 自动生成页面--自动添加路由
 import addRoute from './addRoute.js'
-import routes from './routes'
+import routes from './route.ts'
 
 // const routes = [
 //   {

@@ -1,12 +1,10 @@
 <!--
- * @Author: Derick.lizhiliang
- * @Date: 2026-03-06 23:05:02
- * @email: lzl102872@163.com
+ * @Description: 
+ * @Author: Lizhiliang
+ * @Date: 2026-02-11 14:26:20
+ * @LastEditTime: 2026-03-19 16:56:24
  * @LastEditors: lizhiliang
- * @LastEditTime: 2026-03-18 19:25:18
- * @motto: Still water run deep
- * @Description: Modify here please
- * @FilePath: /project-functionModel/README.md
+ * @Usage: 
 -->
 # project-functionModel
 

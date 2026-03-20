@@ -1,3 +1,13 @@
+/*
+ * @Description: 
+ * @Author: Lizhiliang
+ * @Date: 2026-03-19 16:40:47
+ * @LastEditTime: 2026-03-20 10:59:11
+ * @LastEditors: lizhiliang
+ * @Usage: 
+ */
+import HomeView from '../views/HomeView.vue'
+
 export default [
   {
     path: '/',
