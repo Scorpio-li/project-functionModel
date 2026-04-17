@@ -20,6 +20,7 @@
     "@antv/infographic": "^0.2.15",
     "axios": "^1.13.6",
     "dompdf.js": "^1.1.1",
+    "element-plus": "^2.13.7",
     "fabric": "^7.2.0",
     "intro.js": "^8.3.2",
     "jheat.js": "^5.0.1",
@@ -28,7 +29,8 @@
     "pinia": "^3.0.4",
     "relationship-ts": "^0.1.1",
     "vue": "^3.5.29",
-    "vue-router": "^5.0.3"
+    "vue-router": "^5.0.3",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.4",

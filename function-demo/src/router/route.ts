@@ -79,4 +79,9 @@ export default [
     name: 'UserProfile',
     component: () => import('@/views/UserProfile/index.vue'),
   },
+  {
+    path: '/jsonExcel',
+    name: 'jsonExcel',
+    component: () => import('@/views/jsonExcel.vue'),
+  },
 ]

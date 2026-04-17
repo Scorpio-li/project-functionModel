@@ -2,7 +2,7 @@
  * @Description:
  * @Author: Lizhiliang
  * @Date: 2026-02-26 16:52:47
- * @LastEditTime: 2026-03-17 14:22:05
+ * @LastEditTime: 2026-04-17 14:25:36
  * @LastEditors: lizhiliang
  * @Usage: 
 -->
@@ -33,7 +33,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/instantMessage">Web端即时通讯(instantMessage)</RouterLink>
         <RouterLink to="/msoMap">Map组件</RouterLink>
         <RouterLink to="/mailBot">发送邮件</RouterLink>
-
+        <RouterLink to="/jsonExcel">jsonExcel</RouterLink>
       </nav>
     </div>
   </header>
