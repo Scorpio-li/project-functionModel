@@ -42,18 +42,19 @@
     <button @click="updatePolygon">更新多边形</button>
     <button @click="removePolygon">删除多边形</button>
     <button @click="clearAll">清空所有</button>
+    <!-- 播放控制面板 -->
+    <div class="control-panel">
+      <button @click="play" :disabled="isPlaying">播放</button>
+      <button @click="pause" :disabled="!isPlaying">暂停</button>
+      <label>
+        速度：
+        <input type="range" min="1" max="10" v-model="speed" />
+        {{ speed }}x
+      </label>
+      <span class="status">进度：{{ currentIndex + 1 }} / {{ trackPoints.length }}</span>
+    </div>
   </div>
-  <!-- 播放控制面板 -->
-  <div class="control-panel">
-    <button @click="play" :disabled="isPlaying">播放</button>
-    <button @click="pause" :disabled="!isPlaying">暂停</button>
-    <label>
-      速度：
-      <input type="range" min="1" max="10" v-model="speed" />
-      {{ speed }}x
-    </label>
-    <span class="status">进度：{{ currentIndex + 1 }} / {{ trackPoints.length }}</span>
-  </div>
+  
 </template>
 
 <script setup lang="ts">
