@@ -65,7 +65,7 @@ import defaultAvatar from '@/assets/images/icon_navigation.svg'
 
 const mapComponent: any = ref(null)
 const mapBaiduMapGL = ref(null)
-const mapBaiduMap = ref(null)
+const mapBaiduMap: any = ref(null)
 
 const onMapReady = (map: any) => {
   console.log('地图已就绪:', map)
@@ -241,10 +241,18 @@ const play = () => {
     weight: 5,
     opacity: 0.7,
   })
+  const trackBaiduPoints = trackPoints.value.map(point => new BMap.Point(point[1], point[0]))
+  mapBaiduMap.value?.playPolyline(trackBaiduPoints, currentIndex.value, speed.value, {
+    strokeColor: "#ff0000",    // 折线颜色
+    strokeWeight: 2,           // 折线的宽度，以像素为单位
+    strokeOpacity: 0.8,        // 折线的透明度，取值范围0 - 1
+    strokeStyle: "#dashed",      // 折线的样式，solid或dashed
+  })
 }
 
 const pause = () => {
   mapComponent.value?.pausePolyline()
+  mapBaiduMap.value?.pausePolyline()
   isPlaying.value = false
 }
 
