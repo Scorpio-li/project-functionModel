@@ -19,6 +19,7 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --theme-primary: #3b82f6;
 }
 
 /* semantic color variables for this project */
@@ -48,6 +49,10 @@
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
   }
+}
+
+.dark {
+  --theme-primary: #60a5fa;
 }
 
 *,

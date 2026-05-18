@@ -84,4 +84,9 @@ export default [
     name: 'jsonExcel',
     component: () => import('@/views/jsonExcel.vue'),
   },
+  {
+    path: '/cssStyle',
+    name: 'cssStyle',
+    component: () => import('@/views/cssStyle/index.vue'),
+  }
 ]
