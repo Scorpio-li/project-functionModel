@@ -1,6 +1,7 @@
 <template>
   <h2>我的地图</h2>
-  <section style="height: 600px; margin: 10px;">
+  <!-- Leaflet Map -->
+  <section class="map-wrap" style="height: 600px; margin: 10px">
     <h2>Leaflet Map</h2>
     <LeafletMap
       ref="mapComponent"
@@ -11,7 +12,8 @@
       @pause-polyline="onPausePolyline"
     />
   </section>
-  <section style="height: 600px; margin: 10px;">
+  <!-- 百度地图GL -->
+  <section class="map-wrap" style="height: 600px; margin: 10px">
     <h2>Baidu Map GL</h2>
     <BaiduMapGL
       ref="mapBaiduMapGL"
@@ -21,7 +23,8 @@
       @ready="onBaiduMapReady"
     />
   </section>
-  <section style="height: 600px; margin: 10px;">
+  <!-- 百度地图 -->
+  <section class="map-wrap" style="height: 600px; margin: 10px">
     <h2>Baidu Map</h2>
     <BaiduMap
       ref="mapBaiduMap"
@@ -30,6 +33,17 @@
       :zoom="15"
       @ready="onBaiduMapReady"
     />
+  </section>
+  <!-- google地图 -->
+  <section class="map-wrap" style="height: 600px; margin: 10px">
+    <h2>Google Map</h2>
+    <!-- <GoogleMap
+      ref="mapGoogleMap"
+      apiKey="<KEY>"
+      :center="{ lat: 39.915, lng: 116.404 }"
+      :zoom="15"
+      @ready="onGoogleMapReady"
+    /> -->
   </section>
   <div style="margin-top: 50px">
     <button @click="addMarker">添加标记点</button>
@@ -54,7 +68,6 @@
       <span class="status">进度：{{ currentIndex + 1 }} / {{ trackPoints.length }}</span>
     </div>
   </div>
-  
 </template>
 
 <script setup lang="ts">
@@ -82,6 +95,7 @@ const onMapClick = (latlng: any) => {
 const addMarker = () => {
   addLeafletMarker()
   addBaiduMapMarker()
+  addBaiduMapGLMarker()
 }
 
 const addLeafletMarker = () => {
@@ -101,34 +115,69 @@ const addLeafletMarker = () => {
 }
 
 const addBaiduMapMarker = () => {
-  const authorSize =  new BMap.Size(10, 25);
-  const icon = mapBaiduMap.value?.createIcon(defaultAvatar, {
-    width: 38,
-    height: 95,
-  }, {
-    anchor: authorSize,
-    imageOffset: new BMap.Size(-10, -10),
-  })
+  const authorSize = new BMap.Size(10, 25)
+  const icon = mapBaiduMap.value?.createIcon(
+    defaultAvatar,
+    {
+      width: 38,
+      height: 95,
+    },
+    {
+      anchor: authorSize,
+      imageOffset: new BMap.Size(-10, -10),
+    },
+  )
 
-  mapBaiduMap.value?.addMarker('marker-1', {lat: 39.909, lng: 116.397}, {
-    icon,
-    title: '百度Map标注点'
-  })
+  mapBaiduMap.value?.addMarker(
+    'marker-1',
+    { lat: 39.909, lng: 116.397 },
+    {
+      icon,
+      title: '百度Map标注点',
+    },
+  )
+}
+
+const addBaiduMapGLMarker = () => {
+  const authorSize = new BMapGL.Size(10, 25)
+  const icon = mapBaiduMapGL.value?.createIcon(
+    defaultAvatar,
+    {
+      width: 38,
+      height: 95,
+    },
+    {
+      anchor: authorSize,
+      imageOffset: new BMapGL.Size(-10, -10),
+    },
+  )
+
+  mapBaiduMapGL.value?.addMarker(
+    'marker-1',
+    { lat: 39.909, lng: 116.397 },
+    {
+      icon,
+      title: '百度MapGL标注点',
+    },
+  )
 }
 
 const removeMarker = () => {
   mapComponent.value?.removeMarker('marker-1')
   mapBaiduMap.value?.removeMarker('marker-1')
+  mapBaiduMapGL.value?.removeMarker('marker-1')
 }
 
 const updateMarker = () => {
   mapComponent.value?.updateMarker('marker-1', [39.959, 116.367])
-  mapBaiduMap.value?.updateMarker('marker-1', {lat: 39.959, lng: 116.367})
+  mapBaiduMap.value?.updateMarker('marker-1', { lat: 39.959, lng: 116.367 })
+  mapBaiduMapGL.value?.updateMarker('marker-1', { lat: 39.959, lng: 116.367 })
 }
 /* ----------------------------- 圆形 ----------------------------- */
 const addCircle = () => {
   addLeafletCircle()
   addBaiduMapCircle()
+  addBaiduMapGLCircle()
 }
 
 const addLeafletCircle = () => {
@@ -143,26 +192,38 @@ const addLeafletCircle = () => {
 const addBaiduMapCircle = () => {
   mapBaiduMap.value?.addCircle(
     'circle-1',
-    {lat: 39.915, lng: 116.404},
+    { lat: 39.915, lng: 116.404 },
     500, // 半径 500 米
     { strokeColor: 'blue', fillColor: '#3388ff', fillOpacity: 0.2 },
   )
 }
 
+const addBaiduMapGLCircle = () => {
+  mapBaiduMapGL.value?.addCircle(
+    'circle-1',
+    { lat: 39.915, lng: 116.404 },
+    800, // 半径 500 米
+    { strokeColor: 'green', fillColor: '#3388ff', fillOpacity: 0.2 },
+  )
+}
+
 const updateCircle = () => {
   mapComponent.value?.updateCircle('circle-1', [39.926, 116.378], Math.random() * 1000)
-  mapBaiduMap.value?.updateCircle('circle-1', {lat: 39.926, lng: 116.378}, Math.random() * 1000)
+  mapBaiduMap.value?.updateCircle('circle-1', { lat: 39.926, lng: 116.378 }, Math.random() * 1000)
+  mapBaiduMapGL.value?.updateCircle('circle-1', { lat: 39.926, lng: 116.378 }, Math.random() * 1000)
 }
 
 const removeCircle = () => {
   mapComponent.value?.removeCircle('circle-1')
   mapBaiduMap.value?.removeCircle('circle-1')
+  mapBaiduMapGL.value?.removeCircle('circle-1')
 }
 
 /* ----------------------------- 多边形 ----------------------------- */
 const addPolygon = () => {
   addLeafletPolygon()
   addBaiduMapPolygon()
+  addBaiduMapGLPolygon()
 }
 
 const addLeafletPolygon = () => {
@@ -186,14 +247,28 @@ const addBaiduMapPolygon = () => {
   ]
   console.log('latlngs', latlngs)
   mapBaiduMap.value?.addPolygon('polygon-1', latlngs, {
-    strokeColor: "#ff0000",    // 必须：设置一个醒目的边框颜色，如红色
-    strokeWeight: 2,           // 必须：设置边框粗细
-    strokeOpacity: 0.8,        // 边框透明度，范围 0~1
-    fillColor: "#0000ff",      // 填充颜色，如蓝色
-    fillOpacity: 0.3           // 必须：填充透明度，不为0才能看到填充色
+    strokeColor: '#ff0000', // 必须：设置一个醒目的边框颜色，如红色
+    strokeWeight: 2, // 必须：设置边框粗细
+    strokeOpacity: 0.8, // 边框透明度，范围 0~1
+    fillColor: '#0000ff', // 填充颜色，如蓝色
+    fillOpacity: 0.3, // 必须：填充透明度，不为0才能看到填充色
   })
 }
 
+const addBaiduMapGLPolygon = () => {
+  const latlngs = [
+    new BMapGL.Point(116.39, 39.905),
+    new BMapGL.Point(116.4, 39.91),
+    new BMapGL.Point(116.405, 39.9),
+  ]
+  mapBaiduMapGL.value?.addPolygon('polygon-1', latlngs, {
+    strokeColor: '#000000', // 必须：设置一个醒目的边框颜色，如红色
+    strokeWeight: 2, // 必须：设置边框粗细
+    strokeOpacity: 0.8, // 边框透明度，范围 0~1
+    fillColor: '#0000ff', // 填充颜色，如蓝色
+    fillOpacity: 0.5,
+  })
+}
 
 const updatePolygon = () => {
   mapComponent.value?.updatePolygon('polygon-1', [
@@ -206,16 +281,24 @@ const updatePolygon = () => {
     new BMap.Point(116.405, 39.916),
     new BMap.Point(116.408, 39.922),
   ])
+  mapBaiduMapGL.value?.updatePolygon('polygon-1', [
+    new BMapGL.Point(116.395, 39.915),
+    new BMapGL.Point(116.405, 39.916),
+    new BMapGL.Point(116.408, 39.922),
+  ])
 }
 
 const removePolygon = () => {
   mapComponent.value?.removePolygon('polygon-1')
   mapBaiduMap.value?.removePolygon('polygon-1')
+  mapBaiduMapGL.value?.removePolygon('polygon-1')
 }
 
 // 清除所有
 const clearAll = () => {
   mapComponent.value?.clearAll()
+  mapBaiduMap.value?.clearAll()
+  mapBaiduMapGL.value?.clearAll()
 }
 
 // 轨迹点数据（示例：经纬度数组）
@@ -241,18 +324,25 @@ const play = () => {
     weight: 5,
     opacity: 0.7,
   })
-  const trackBaiduPoints = trackPoints.value.map(point => new BMap.Point(point[1], point[0]))
+  const trackBaiduPoints = trackPoints.value.map((point) => new BMap.Point(point[1], point[0]))
   mapBaiduMap.value?.playPolyline(trackBaiduPoints, currentIndex.value, speed.value, {
-    strokeColor: "#ff0000",    // 折线颜色
-    strokeWeight: 2,           // 折线的宽度，以像素为单位
-    strokeOpacity: 0.8,        // 折线的透明度，取值范围0 - 1
-    strokeStyle: "#dashed",      // 折线的样式，solid或dashed
+    strokeColor: '#ff0000', // 折线颜色
+    strokeWeight: 2, // 折线的宽度，以像素为单位
+    strokeOpacity: 0.8, // 折线的透明度，取值范围0 - 1
+    strokeStyle: 'dashed', // 折线的样式，solid或dashed
+  })
+  mapBaiduMapGL.value?.playPolyline(trackBaiduPoints, currentIndex.value, speed.value, {
+    strokeColor: '#000000', // 折线颜色
+    strokeWeight: 2, // 折线的宽度，以像素为单位
+    strokeOpacity: 0.8, // 折线的透明度，取值范围0 - 1
+    strokeStyle: 'solid', // 折线的样式，solid或dashed
   })
 }
 
 const pause = () => {
   mapComponent.value?.pausePolyline()
   mapBaiduMap.value?.pausePolyline()
+  mapBaiduMapGL.value?.pausePolyline()
   isPlaying.value = false
 }
 
@@ -274,5 +364,10 @@ watch(speed, () => {
 .main {
   width: 100%;
   height: 500px;
+}
+.map-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 </style>
