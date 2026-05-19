@@ -20,7 +20,7 @@
       ak="cpwmO0V0uNDJClOk7JsGJJfZPNxShx0x"
       :center="{ lng: 116.404, lat: 39.915 }"
       :zoom="15"
-      @ready="onBaiduMapReady"
+      @map-ready="onBaiduMapReady"
     />
   </section>
   <!-- 百度地图 -->
@@ -31,19 +31,20 @@
       ak="cpwmO0V0uNDJClOk7JsGJJfZPNxShx0x"
       :center="{ lng: 116.404, lat: 39.915 }"
       :zoom="15"
-      @ready="onBaiduMapReady"
+      @map-ready="onBaiduMapReady"
     />
   </section>
   <!-- google地图 -->
   <section class="map-wrap" style="height: 600px; margin: 10px">
     <h2>Google Map</h2>
-    <!-- <GoogleMap
+    <GoogleMap
       ref="mapGoogleMap"
-      apiKey="<KEY>"
+      ak="AIzaSyCQEaW2UgTcXTgZtseRkIBzBL5ph_DLKaQ"
       :center="{ lat: 39.915, lng: 116.404 }"
       :zoom="15"
-      @ready="onGoogleMapReady"
-    /> -->
+      :mapOptios="{ cameraControl: false, mapTypeControl: false, fullscreenControl: false }"
+      @map-ready="onGoogleMapReady"
+    />
   </section>
   <div style="margin-top: 50px">
     <button @click="addMarker">添加标记点</button>
@@ -72,19 +73,24 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { LeafletMap, BaiduMapGL, BaiduMap } from 'mso-map'
+import { LeafletMap, BaiduMapGL, BaiduMap, GoogleMap } from 'mso-map'
 import 'mso-map/style.css'
 import defaultAvatar from '@/assets/images/icon_navigation.svg'
 
 const mapComponent: any = ref(null)
-const mapBaiduMapGL = ref(null)
+const mapBaiduMapGL: any = ref(null)
 const mapBaiduMap: any = ref(null)
+const mapGoogleMap: any = ref(null)
 
 const onMapReady = (map: any) => {
   console.log('地图已就绪:', map)
 }
 const onBaiduMapReady = (map: any) => {
   console.log('百度地图已就绪:', map)
+}
+
+const onGoogleMapReady = (map: any) => {
+  console.log('google地图已就绪:', map)
 }
 
 const onMapClick = (latlng: any) => {
@@ -96,6 +102,7 @@ const addMarker = () => {
   addLeafletMarker()
   addBaiduMapMarker()
   addBaiduMapGLMarker()
+  addGoogleMapMarker()
 }
 
 const addLeafletMarker = () => {
@@ -162,22 +169,43 @@ const addBaiduMapGLMarker = () => {
   )
 }
 
+const addGoogleMapMarker = () => {
+  const icon = mapGoogleMap.value?.createIcon(defaultAvatar, {
+    width: 38,
+    height: 95,
+  })
+  mapGoogleMap.value?.addMarker(
+    'marker-1',
+    { lat: 39.909, lng: 116.397 },
+    {
+      content: icon,
+      title: 'googleMap标注点',
+      // icon: customIcon,
+      zIndex: 10,
+      draggable: false, // 可设为 true 允许拖拽
+    },
+  )
+}
+
 const removeMarker = () => {
   mapComponent.value?.removeMarker('marker-1')
   mapBaiduMap.value?.removeMarker('marker-1')
   mapBaiduMapGL.value?.removeMarker('marker-1')
+  mapGoogleMap.value?.removeMarker('marker-1')
 }
 
 const updateMarker = () => {
   mapComponent.value?.updateMarker('marker-1', [39.959, 116.367])
   mapBaiduMap.value?.updateMarker('marker-1', { lat: 39.959, lng: 116.367 })
   mapBaiduMapGL.value?.updateMarker('marker-1', { lat: 39.959, lng: 116.367 })
+  mapGoogleMap.value?.updateMarker('marker-1', { lat: 39.959, lng: 116.367 })
 }
 /* ----------------------------- 圆形 ----------------------------- */
 const addCircle = () => {
   addLeafletCircle()
   addBaiduMapCircle()
   addBaiduMapGLCircle()
+  addGoogleMapCircle()
 }
 
 const addLeafletCircle = () => {
@@ -207,16 +235,33 @@ const addBaiduMapGLCircle = () => {
   )
 }
 
+const addGoogleMapCircle = () => {
+  mapGoogleMap.value?.addCircle(
+    'circle-1',
+    { lat: 39.915, lng: 116.404 },
+    500, // 半径 500 米
+    {
+      strokeColor: '#FF0000', // 描边颜色（红色）
+      strokeOpacity: 0.8, // 描边透明度
+      strokeWeight: 2, // 描边宽度
+      fillColor: '#FF0000', // 填充颜色（红色）
+      fillOpacity: 0.35, // 填充透明度
+    },
+  )
+}
+
 const updateCircle = () => {
   mapComponent.value?.updateCircle('circle-1', [39.926, 116.378], Math.random() * 1000)
   mapBaiduMap.value?.updateCircle('circle-1', { lat: 39.926, lng: 116.378 }, Math.random() * 1000)
   mapBaiduMapGL.value?.updateCircle('circle-1', { lat: 39.926, lng: 116.378 }, Math.random() * 1000)
+  mapGoogleMap.value?.updateCircle('circle-1', { lat: 39.926, lng: 116.378 }, Math.random() * 1000)
 }
 
 const removeCircle = () => {
   mapComponent.value?.removeCircle('circle-1')
   mapBaiduMap.value?.removeCircle('circle-1')
   mapBaiduMapGL.value?.removeCircle('circle-1')
+  mapGoogleMap.value?.removeCircle('circle-1')
 }
 
 /* ----------------------------- 多边形 ----------------------------- */
@@ -224,6 +269,7 @@ const addPolygon = () => {
   addLeafletPolygon()
   addBaiduMapPolygon()
   addBaiduMapGLPolygon()
+  addGoogleMapPolygon()
 }
 
 const addLeafletPolygon = () => {
@@ -270,6 +316,21 @@ const addBaiduMapGLPolygon = () => {
   })
 }
 
+const addGoogleMapPolygon = () => {
+  const latlngs = [
+    { lat: 39.907, lng: 116.396 },
+    { lat: 39.918, lng: 116.406 },
+    { lat: 39.903, lng: 116.408 },
+  ]
+  mapGoogleMap.value?.addPolygon('polygon-1', latlngs, {
+    strokeColor: '#0000FF', // 描边颜色（蓝色）
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: '#0000FF', // 填充颜色（蓝色）
+    fillOpacity: 0.35,
+  })
+}
+
 const updatePolygon = () => {
   mapComponent.value?.updatePolygon('polygon-1', [
     [39.907, 116.396],
@@ -286,12 +347,18 @@ const updatePolygon = () => {
     new BMapGL.Point(116.405, 39.916),
     new BMapGL.Point(116.408, 39.922),
   ])
+  mapGoogleMap.value?.updatePolygon('polygon-1', [
+    { lat: 39.915, lng: 116.395 },
+    { lat: 39.958, lng: 116.476 },
+    { lat: 39.983, lng: 116.498 },
+  ])
 }
 
 const removePolygon = () => {
   mapComponent.value?.removePolygon('polygon-1')
   mapBaiduMap.value?.removePolygon('polygon-1')
   mapBaiduMapGL.value?.removePolygon('polygon-1')
+  mapGoogleMap.value?.removePolygon('polygon-1')
 }
 
 // 清除所有
@@ -299,6 +366,7 @@ const clearAll = () => {
   mapComponent.value?.clearAll()
   mapBaiduMap.value?.clearAll()
   mapBaiduMapGL.value?.clearAll()
+  mapGoogleMap.value?.clearAll()
 }
 
 // 轨迹点数据（示例：经纬度数组）
@@ -337,12 +405,19 @@ const play = () => {
     strokeOpacity: 0.8, // 折线的透明度，取值范围0 - 1
     strokeStyle: 'solid', // 折线的样式，solid或dashed
   })
+  mapGoogleMap.value?.playPolyline(trackBaiduPoints, currentIndex.value, speed.value, {
+    strokeColor: '#FF0000', // 线条颜色（红色）
+    strokeOpacity: 1.0, // 线条透明度
+    strokeWeight: 3, // 线条宽度（像素）
+    geodesic: true, // 是否按地球曲率绘制（长距离轨迹建议设为 true）
+  })
 }
 
 const pause = () => {
   mapComponent.value?.pausePolyline()
   mapBaiduMap.value?.pausePolyline()
   mapBaiduMapGL.value?.pausePolyline()
+  mapGoogleMap.value?.pausePolyline()
   isPlaying.value = false
 }
 
