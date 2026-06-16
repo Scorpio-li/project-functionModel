@@ -88,5 +88,10 @@ export default [
     path: '/cssStyle',
     name: 'cssStyle',
     component: () => import('@/views/cssStyle/index.vue'),
+  },
+  {
+    path: '/algorithm',
+    name: 'algorithm',
+    component: () => import('@/views/algorithm/index.vue'),
   }
 ]

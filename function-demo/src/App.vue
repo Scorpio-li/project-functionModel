@@ -35,6 +35,8 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/mailBot">发送邮件</RouterLink>
         <RouterLink to="/jsonExcel">jsonExcel</RouterLink>
         <RouterLink to="/cssStyle">css封装</RouterLink>
+        <RouterLink to="/algorithm">轨迹平滑优化</RouterLink>
+
       </nav>
     </div>
   </header>
