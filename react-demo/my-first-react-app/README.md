@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Author: Lizhiliang
+ * @Date: 2026-09-01 15:57:13
+ * @LastEditTime: 2026-09-01 16:24:23
+ * @LastEditors: lizhiliang
+ * @Usage: 
+-->
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
