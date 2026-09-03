@@ -2,7 +2,7 @@
  * @Description:
  * @Author: Lizhiliang
  * @Date: 2026-09-01 15:57:13
- * @LastEditTime: 2026-09-01 17:10:59
+ * @LastEditTime: 2026-09-03 17:37:13
  * @LastEditors: lizhiliang
  * @Usage:
  */
@@ -14,6 +14,7 @@ import "./App.css";
 import HelloWorld from "./components/HelloWorld.jsx";
 import Greeting from "./components/Greeting.jsx";
 import Card from "./components/Card.jsx";
+import Welcome from "./components/Welcome.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,6 +24,8 @@ function App() {
       <HelloWorld name="Li Zhiliang" />
 
       <Greeting name="lzl" />
+
+      <Welcome name="lizhiliagn" />
 
       <div
         style={{
@@ -177,6 +180,8 @@ function App() {
           编辑 <code>src/App.jsx</code> 并保存体验热更新！
         </p>
       </div>
+
+      {/* */}
     </>
   );
 }

@@ -1,11 +1,12 @@
 <!--
- * @Description: 
+ * @Description:
  * @Author: Lizhiliang
  * @Date: 2026-09-01 15:57:13
  * @LastEditTime: 2026-09-01 16:24:23
  * @LastEditors: lizhiliang
- * @Usage: 
+ * @Usage:
 -->
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -23,7 +24,9 @@ The React Compiler is not enabled on this template because of its impact on dev 
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
-
-## 创建React项目
+## 创建 React 项目
 
 - vite: pnpm create vite@latest my-first-react-app -- --template react
+  - create vite@latest：使用最新版 Vite 创建工具。
+  - my-first-react-app：你的项目名称（小写字母 + 连字符推荐）。
+  - -- --template react：指定 React 模板。
