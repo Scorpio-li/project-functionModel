@@ -15,6 +15,7 @@ import HelloWorld from "./components/HelloWorld.jsx";
 import Greeting from "./components/Greeting.jsx";
 import Card from "./components/Card.jsx";
 import Welcome from "./components/Welcome.jsx";
+import Tailwind from "./components/Tailwind.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -181,7 +182,8 @@ function App() {
         </p>
       </div>
 
-      {/* */}
+      {/* Tailwind.css样式 */}
+      <Tailwind />
     </>
   );
 }
