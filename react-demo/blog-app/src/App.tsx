@@ -2,12 +2,23 @@
  * @Description:
  * @Author: Lizhiliang
  * @Date: 2026-09-09 10:16:13
- * @LastEditTime: 2026-09-09 10:48:39
+ * @LastEditTime: 2026-09-15 17:24:50
  * @LastEditors: lizhiliang
  * @Usage:
  */
-import { useState, useMemo } from "react";
+/*
+ * @Description:
+ * @Author: Lizhiliang
+ * @Date: 2026-09-09 10:16:13
+ * @LastEditTime: 2026-09-15 17:09:51
+ * @LastEditors: lizhiliang
+ * @Usage:
+ */
+import { useState, useMemo, type SetStateAction } from "react";
 import "./App.css";
+import BlogCard from "./components/BlogCard";
+import CategoryFilter from "./components/CategoryFilter";
+import NavBar from './components/NavBar'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -62,17 +73,22 @@ function App() {
     if (activeCategory === "全部") return articles;
     return articles.filter((a) => a.category === activeCategory);
   }, [articles, activeCategory]);
+
+  const handleCategoryChange = (cat: SetStateAction<string>) => {
+    setActiveCategory(cat)
+  }
   return (
     <>
       <div className="app">
         {/* 顶部导航栏 */}
-        <header className="navbar">
+        {/* <header className="navbar">
           <h1 className="logo">RUNOOB Blog</h1>
           <nav>
             <a href="/">首页</a>
             <a href="#">关于</a>
           </nav>
-        </header>
+        </header> */}
+        <NavBar />
 
         {/* 主内容区 */}
         <main className="container">
@@ -89,6 +105,7 @@ function App() {
               </button>
             ))}
           </div>
+          <CategoryFilter categories={categories} activeCategory={activeCategory} onCategoryChange={handleCategoryChange} />
           <p className="result-info">共 {filteredArticles.length} 篇</p>
 
           {filteredArticles.length === 0 ? (
@@ -104,6 +121,16 @@ function App() {
                     <span className="card-date">{article.date}</span>
                   </div>
                 </div>
+              ))}
+
+              {articles.map((article) => (
+                <BlogCard
+                  key={article.id}
+                  title={article.title}
+                  summary={article.summary}
+                  date={article.date}
+                  category={article.category}
+                />
               ))}
             </div>
           )}
