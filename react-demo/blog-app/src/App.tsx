@@ -15,6 +15,7 @@
  * @Usage:
  */
 import { useState, useMemo, type SetStateAction } from "react";
+import { Outlet } from "react-router-dom";
 import "./App.css";
 import BlogCard from "./components/BlogCard";
 import CategoryFilter from "./components/CategoryFilter";
@@ -80,6 +81,11 @@ function App() {
   return (
     <>
       <div className="app">
+        {/* 路由 */}
+        <main className="container">
+          {/* Outlet 是嵌套路由的出口：子路由匹配到的组件会在这里渲染 */}
+          <Outlet />
+        </main>
         {/* 顶部导航栏 */}
         {/* <header className="navbar">
           <h1 className="logo">RUNOOB Blog</h1>

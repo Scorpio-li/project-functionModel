@@ -7,14 +7,19 @@
  * @Usage:
  */
 
-const BlogCard = ({ title, summary, date, category }) => {
+import { Link } from "react-router-dom";
+
+const BlogCard = ({ id, title, summary, date, category }: any) => {
   return (
-    <div className="card">
-      <span className="tag">{category}</span>
-      <h3>{title}</h3>
-      <p>{summary}</p>
-      <span className="date">{date}</span>
-    </div>
+    // Link 替代了传统的 <a> 标签，不会触发页面刷新。
+    <Link to={`/post/${id}`} className="card-link">
+      <div className="card">
+        <span className="tag">{category}</span>
+        <h3>{title}</h3>
+        <p>{summary}</p>
+        <span className="date">{date}</span>
+      </div>
+    </Link>
   );
 };
 
