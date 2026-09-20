@@ -36,6 +36,7 @@ function HomePage() {
   const [error, setError] = useState(null); // 错误信息
 
   const [activeCategory, setActiveCategory] = useState("全部");
+  const [keyword, setKeyword] = useState(""); // 搜索关键词
 
   // useEffect 加载数据：空依赖数组 = 仅在首次渲染后执行一次
   useEffect(() => {
@@ -75,13 +76,46 @@ function HomePage() {
   }, [articles]);
 
   const filteredArticles = useMemo(() => {
-    if (activeCategory === "全部") return articles;
-    return articles.filter((a: any) => a.category === activeCategory);
-  }, [articles, activeCategory]);
+    let result = articles;
+    // if (activeCategory === "全部") return articles;
+    // return articles.filter((a: any) => a.category === activeCategory);
+    // 先按分类过滤
+    if (activeCategory !== "全部") {
+      result = result.filter((a) => a.category === activeCategory);
+    }
+
+    // 再按关键词过滤
+    if (keyword.trim()) {
+      const kw = keyword.trim().toLowerCase();
+      result = result.filter(
+        (a) =>
+          a.title.toLowerCase().includes(kw) ||
+          a.summary.toLowerCase().includes(kw)
+      );
+    }
+
+    return result;
+  }, [articles, activeCategory, keyword]);
 
   return (
     <div>
       <h2 className="section-title">最新文章</h2>
+
+      {/* 搜索框 */}
+      <div className="search-bar">
+        <input
+          type="text"
+          value={keyword}
+          onChange={(e) => setKeyword(e.target.value)}
+          placeholder="搜索文章标题或摘要..."
+          className="search-input"
+        />
+        {keyword && (
+          <span className="clear-btn" onClick={() => setKeyword("")}>
+            ✕
+          </span>
+        )}
+      </div>
       {/* 加载中 */}
       {isLoading && <p className="status-msg">加载中，请稍候...</p>}
       {/* 加载出错 */}
@@ -114,7 +148,9 @@ function HomePage() {
             activeCategory={activeCategory}
             onCategoryChange={setActiveCategory}
           />
-          <p className="result-info">共 {filteredArticles.length} 篇</p>
+          <p className="result-info">
+            共 {filteredArticles.length} 篇{keyword && `，搜索「${keyword}」`}
+          </p>
           {filteredArticles.length === 0 ? (
             <p className="empty-tip">该分类下暂无文章</p>
           ) : (
