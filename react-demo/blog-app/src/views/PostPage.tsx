@@ -9,7 +9,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useMemo } from "react";
 import "../style/PostPage.module.css";
-
+import { useFavorites } from "../context/FavoriteContext";
 // 文章数据（后续章节会从外部加载）
 const articles = [
   {
@@ -46,9 +46,17 @@ const PostPage = () => {
       </div>
     );
   }
+
+  const { isFavorite, toggleFavorite } = useFavorites();
   // 文章存在
   return (
     <article className="post-view">
+      <div className="post-header">
+        <h1>{article.title}</h1>
+        <button className="fav-btn" onClick={() => toggleFavorite(article.id)}>
+          {isFavorite(article.id) ? "&#x2665; 已收藏" : "♡ 收藏"}
+        </button>
+      </div>
       <span className="category-tag">{article.category}</span>
       <h1>{article.title}</h1>
       <time>{article.date}</time>
